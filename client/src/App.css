@@ -1,3 +1,37 @@
-.App {
-  text-align: center;
+html {
+  scroll-snap-type: mandatory;
 }
+
+h1 {
+  color: #EDE1CF;
+}
+
+.app {
+  height: 100vh;
+  background-color: #107980;
+  display: grid;
+  place-items: center;
+}
+
+.app_videos {
+  position: relative;
+  height: 800px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+  overflow: scroll;
+  scroll-snap-type: mandatory;
+}
+
+
+/* Hide scrollbar for Chrome, Edge, Safari and Opera */
+
+.app_videos ::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.app_videos {
+  scrollbar-width: none;
+}
+
