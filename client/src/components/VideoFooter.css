@@ -1,0 +1,23 @@
+.video_footer {
+  position: relative;
+  color: #EDE1CF;
+  bottom: 200px;
+  margin-left: 40px;
+  display: flex;
+}
+
+.video_footer_text {
+  flex: 1;
+}
+
+.video_footer_text > p {
+  padding-bottom: 20px;
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.video_footer_text > h3 {
+  padding-bottom: 20px;
+}
