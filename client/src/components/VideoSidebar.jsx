@@ -15,7 +15,7 @@ function VideoSidebar() {
        ) : (
           <MdFavorite fontSize="xx-large" style={{color: "#EDE1CF"}} onClick={(e) => setIsLiked(true)}/>
        )}
-        <p>1000</p>
+        <p>{isLiked ? 1001 : 1000}</p>
       </div>
       <div className="video_sidebar_button">
         <RiMessage2Fill fontSize="xx-large" />
