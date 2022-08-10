@@ -2,10 +2,9 @@ import React, { useState, useRef }  from 'react';
 import VideoFooter from './VideoFooter.jsx';
 import VideoSidebar from './VideoSidebar.jsx';
 import './Video.css';
-import sampleVideo from '../assets/IMG_0624.MOV';
 
 
-function Video() {
+function Video({ url, channel, description, song, likesCount, messagesCount, sharesCount}) {
   const [isPlay, setIsPlay] = useState(false);
   const videoRef = useRef(null);
 
@@ -26,9 +25,9 @@ function Video() {
         className="video_player"
         loop
         ref={videoRef}
-        src={sampleVideo}></video>
-      <VideoFooter channel='george' description='😠 How are you feeling today 😄' song='original sound - george' />
-      <VideoSidebar likesCount={123} messagesCount={456} sharesCount={78}/>
+        src={url}></video>
+      <VideoFooter channel={channel} description={description} song={song} />
+      <VideoSidebar likesCount={likesCount} messagesCount={messagesCount} sharesCount={sharesCount}/>
     </div>
   );
 }
