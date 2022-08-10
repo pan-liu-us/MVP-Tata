@@ -27,8 +27,8 @@ function Video() {
         loop
         ref={videoRef}
         src={sampleVideo}></video>
-      <VideoFooter />
-      <VideoSidebar />
+      <VideoFooter channel='george' description='😠 How are you feeling today 😄' song='original sound - george' />
+      <VideoSidebar likesCount={123} messagesCount={456} sharesCount={78}/>
     </div>
   );
 }
