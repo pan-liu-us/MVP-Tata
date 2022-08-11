@@ -10,6 +10,15 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
+app.get('/tata/posts', async(req, res) => {
+  try {
+    const getPosts = await Post.find({})
+    res.status(200).json(getPosts);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+})
+
 app.post(`/tata/posts/${process.env.SECRET}`, async(req, res) => {
   try {
     const addPost = await Post.create(req.body)
