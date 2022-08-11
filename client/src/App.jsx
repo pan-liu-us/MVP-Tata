@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Video from './components/Video.jsx';
+import Mood from './components/Mood.jsx';
 import axios from 'axios';
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="app">
       <h1>🚀 TATA, Get Started </h1>
+      <Mood />
       <div className="app_videos">
       {posts.map((post) => (
         <Video
