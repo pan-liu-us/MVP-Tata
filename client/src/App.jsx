@@ -28,9 +28,10 @@ function App() {
          channel={post.channel}
          description={post.description}
          song={post.song}
-         likes={post.likes}
+         likesCount={Number(post.likesCount)}
+         commentsCount={Number(post.commentsCount)}
+         sharesCount={Number(post.sharesCount)}
          comments={post.comments}
-         shares={post.shares}
         />
       ))}
       </div>

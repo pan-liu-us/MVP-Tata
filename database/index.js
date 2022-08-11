@@ -18,9 +18,13 @@ const postSchema = new Schema({
   channel: String,
   description: String,
   song: String,
-  likes: String,
-  comments: String,
-  shares: String,
+  likesCount: String,
+  commentsCount: String,
+  sharesCount: String,
+  comments: {
+    type: [String],
+    default: []
+  }
 });
 
 const Post = mongoose.model('Post', postSchema);

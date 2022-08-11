@@ -4,7 +4,7 @@ import { MdFavorite } from 'react-icons/md';
 import { RiMessage2Fill } from 'react-icons/ri';
 import { FaShare } from 'react-icons/fa';
 
-function VideoSidebar({ likes, comments, shares}) {
+function VideoSidebar({ likesCount, commentsCount, sharesCount}) {
   const [isLiked, setIsLiked] = useState(false);
 
   return (
@@ -15,15 +15,15 @@ function VideoSidebar({ likes, comments, shares}) {
        ) : (
           <MdFavorite fontSize="xx-large" style={{color: "#EDE1CF"}} onClick={(e) => setIsLiked(true)}/>
        )}
-        <p>{isLiked ? Number(likes) + 1 : Number(likes)}</p>
+        <p>{isLiked ? likesCount + 1 : likesCount}</p>
       </div>
       <div className="video_sidebar_button">
         <RiMessage2Fill fontSize="xx-large" />
-        <p>{comments}</p>
+        <p>{commentsCount}</p>
       </div>
       <div className="video_sidebar_button">
         <FaShare fontSize="xx-large" />
-        <p>{shares}</p>
+        <p>{sharesCount}</p>
       </div>
     </div>
   );
