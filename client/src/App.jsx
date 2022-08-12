@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🚀 TATA, Get Started </h1>
+      <h1>🚀 TATA, Start From Here:</h1>
       <Mood />
       <Share />
       <div className="app_videos">

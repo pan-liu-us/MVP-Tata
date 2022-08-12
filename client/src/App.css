@@ -4,7 +4,10 @@ html {
 }
 
 h1 {
+  font-size: 50px;
   color: #EDE1CF;
+  margin: 0;
+  padding: 0;
 }
 
 .app {

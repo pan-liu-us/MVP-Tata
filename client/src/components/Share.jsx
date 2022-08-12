@@ -4,7 +4,7 @@ import './Share.css'
 function Share() {
   return (
     <div className="share">
-      <span>Share</span>
+      <span>Rate & Share</span>
       <nav>
         <a href="#">
           <i className="fa fa-twitter" />
