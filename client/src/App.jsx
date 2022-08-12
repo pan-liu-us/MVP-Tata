@@ -23,7 +23,7 @@ function App() {
       <Mood />
       <div className="app_videos">
       {posts.map((post) => (
-        <Video
+        <Video key={post._id}
          url={post.url}
          channel={post.channel}
          description={post.description}

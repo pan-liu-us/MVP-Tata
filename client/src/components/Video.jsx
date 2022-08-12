@@ -1,7 +1,6 @@
 import React, { useState, useRef }  from 'react';
 import VideoFooter from './VideoFooter.jsx';
 import VideoSidebar from './VideoSidebar.jsx';
-import Comment from './Comment.jsx';
 import './Video.css';
 
 
@@ -16,7 +15,6 @@ function Video({
     comments
   }) {
   const [isPlay, setIsPlay] = useState(false);
-  const [showCommentModal, setShowCommentModal] = useState(false);
   const videoRef = useRef(null);
 
   const handleVideoPress = () => {
@@ -27,14 +25,6 @@ function Video({
       videoRef.current.play();
       setIsPlay(true);
     }
-  }
-
-  const hideComments = () => {
-    setShowCommentModal(false);
-  }
-
-  const showComments = () => {
-    setShowCommentModal(true);
   }
 
   return (
@@ -56,16 +46,8 @@ function Video({
         likesCount={likesCount}
         commentsCount={commentsCount}
         sharesCount={sharesCount}
-        onShowComments={showComments}
+        comments={comments}
       />
-      {showCommentModal && (
-        <Comment
-          comments={comments}
-          onHide={hideComments}
-          commentsCount={commentsCount}
-        />
-      )}
-
     </div>
   );
 }
