@@ -1,0 +1,27 @@
+import React from 'react';
+import './Share.css'
+
+function Share() {
+  return (
+    <div className="share">
+      <span>Share</span>
+      <nav>
+        <a href="#">
+          <i className="fa fa-twitter" />
+        </a>
+        <a href="#">
+          <i className="fa fa-facebook" />
+        </a>
+        <a href="#">
+          <i className="fa fa-google" />
+        </a>
+        <a href="#">
+          <i className="fa fa-github" />
+        </a>
+      </nav>
+    </div>
+  )
+}
+
+export default Share;
+

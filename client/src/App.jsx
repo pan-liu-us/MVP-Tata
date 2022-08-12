@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Video from './components/Video.jsx';
 import Mood from './components/Mood.jsx';
+import Share from './components/Share.jsx'
 import axios from 'axios';
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
     <div className="app">
       <h1>🚀 TATA, Get Started </h1>
       <Mood />
+      <Share />
       <div className="app_videos">
       {posts.map((post) => (
         <Video key={post._id}
