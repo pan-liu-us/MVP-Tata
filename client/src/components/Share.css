@@ -10,7 +10,7 @@
   z-index: 100;
 }
 .share span {
-  color: #107980;
+  color: #23a6d5;
   font-size: 20px;
   width: 200px;
   line-height: 80px;
@@ -68,9 +68,9 @@
 .share:hover a, .share.hover a {
   border-radius: 50%;
   margin: 0 10px;
-  color: #107980;
+  color: #e73c7e;
   font-size: 28px;
 }
 .share:hover a:hover, .share.hover a:hover {
-  color: #107980;
+  color: #e73c7e;
 }

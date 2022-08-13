@@ -24,7 +24,7 @@ function VideoSidebar({ likesCount, commentsCount, sharesCount, onShowComments, 
       <div className="video_sidebar_button">
         <RiMessage2Fill fontSize="xx-large" onClick={() => setIsCommentsOpen(true)}/>
         <BottomSheet open={isCommentsOpen}>
-        <AiFillCloseCircle style={{position: "absolute", top: "10px", right: "10px", fontSize: "30px", color: "E34A6F"}} onClick={() => setIsCommentsOpen(false)}/>
+        <AiFillCloseCircle style={{position: "absolute", top: "10px", right: "10px", fontSize: "30px", color: "e73c7e"}} onClick={() => setIsCommentsOpen(false)}/>
           {comments.map((comment, idx) =>
             <div className="commentText" key={idx}>{comment}</div>
           )}
