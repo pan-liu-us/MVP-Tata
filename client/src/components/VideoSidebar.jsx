@@ -9,7 +9,10 @@ import 'react-spring-bottom-sheet/dist/style.css';
 
 function VideoSidebar({ likesCount, commentsCount, sharesCount, onShowComments, comments}) {
   const [isLiked, setIsLiked] = useState(false);
-  const [isCommentsOpen, setIsCommentsOpen] = useState(false)
+  const [isCommentsOpen, setIsCommentsOpen] = useState(false);
+  const [newComment, setNewComment] = useState('');
+  const [allComments, setAllComments] = useState(comments);
+  const [allCommentsCount, setAllCommentsCount] = useState(commentsCount);
 
   return (
     <div className="video_sidebar">
@@ -25,11 +28,17 @@ function VideoSidebar({ likesCount, commentsCount, sharesCount, onShowComments, 
         <RiMessage2Fill fontSize="xx-large" onClick={() => setIsCommentsOpen(true)}/>
         <BottomSheet open={isCommentsOpen}>
         <AiFillCloseCircle style={{position: "absolute", top: "10px", right: "10px", fontSize: "30px", color: "e73c7e"}} onClick={() => setIsCommentsOpen(false)}/>
-          {comments.map((comment, idx) =>
+          <input style={{marginLeft: "20px"}} type="text" value={newComment} onChange={e => setNewComment(e.target.value)}></input>
+          <button type="button" onClick={e => {
+            setAllComments([...allComments, newComment])
+            setNewComment('')
+            setAllCommentsCount(allCommentsCount + 1)
+          }}>Send</button>
+          {allComments.map((comment, idx) =>
             <div className="commentText" key={idx}>{comment}</div>
           )}
         </BottomSheet>
-        <p>{commentsCount}</p>
+        <p>{allCommentsCount}</p>
       </div>
       <div className="video_sidebar_button">
         <FaShare fontSize="xx-large" />
