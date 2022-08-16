@@ -6,16 +6,16 @@ function Share() {
     <div className="share">
       <span>Rate & Share</span>
       <nav>
-        <a href="#">
+        <a href="https://twitter.com/">
           <i className="fa fa-twitter" />
         </a>
-        <a href="#">
+        <a href="https://www.facebook.com/">
           <i className="fa fa-facebook" />
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com/">
           <i className="fa fa-instagram" />
         </a>
-        <a href="#">
+        <a href="https://github.com/">
           <i className="fa fa-github" />
         </a>
       </nav>
