@@ -16,6 +16,12 @@ function VideoSidebar({ url, likesCount, commentsCount, sharesCount, onShowComme
   const [allLikesCount, setAllLikesCount] = useState(likesCount);
   const [allSharesCount, setAllSharesCount] = useState(sharesCount);
 
+  const commentProcess = () => {
+    setAllComments([...allComments, newComment])
+    setNewComment('')
+    setAllCommentsCount(allCommentsCount + 1)
+  }
+
   return (
     <div className="video_sidebar">
       <div className="video_sidebar_button">
@@ -29,13 +35,17 @@ function VideoSidebar({ url, likesCount, commentsCount, sharesCount, onShowComme
       <div className="video_sidebar_button">
         <RiMessage2Fill fontSize="xx-large" onClick={() => setIsCommentsOpen(true)}/>
         <BottomSheet open={isCommentsOpen}>
-        <AiFillCloseCircle style={{position: "absolute", top: "10px", right: "10px", fontSize: "30px", color: "e73c7e"}} onClick={() => setIsCommentsOpen(false)}/>
-          <input style={{marginLeft: "20px"}} type="text" value={newComment} onChange={e => setNewComment(e.target.value)}></input>
-          <button type="button" onClick={e => {
-            setAllComments([...allComments, newComment])
-            setNewComment('')
-            setAllCommentsCount(allCommentsCount + 1)
-          }}>Send</button>
+        <AiFillCloseCircle
+          style={{position: "absolute", top: "10px", right: "10px", fontSize: "30px", color: "e73c7e"}}
+          onClick={() => setIsCommentsOpen(false)}/>
+          <input
+            style={{marginLeft: "20px", border: "2px solid #23a6d5"}}
+            type="text" value={newComment}
+            onChange={e => setNewComment(e.target.value)}></input>
+          <button
+            style={{color: "#fff", backgroundColor: "#23d5ab", border: "2px solid #23a6d5"}}
+            type="button"
+            onClick={e => {newComment.length ? commentProcess() : alert('Please enter your comment before sending :)')}}>Send</button>
           {allComments.map((comment, idx) =>
             <div className="commentText" key={idx}>{comment}</div>
           )}
