@@ -49,7 +49,7 @@ function Mood() {
             <label className="good">
                 <input type="radio" value="4" name="feedback" defaultChecked onClick={e =>
                     {setTimeout(function(){
-                    alert(`Thanks for your feedback! Let's share TATA to your friends`)
+                        prompt(`Thanks for your feedback! Let's share TATA to your friends`, `http://www.jointata.com/`)
                     }, 1000)}}/>
                 <div>
                     <svg className="eye left">
@@ -66,7 +66,7 @@ function Mood() {
             <label className="happy">
                 <input type="radio" value="5" name="feedback" onClick={e =>
                     {setTimeout(function(){
-                    alert(`Thanks for your feedback! Let's share TATA to your friends`)
+                        prompt(`Thanks for your feedback! Let's share TATA to your friends`, `http://www.jointata.com/`)
                     }, 1000)}}/>
                 <div>
                     <svg className="eye left">
