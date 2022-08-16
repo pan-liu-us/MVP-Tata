@@ -6,7 +6,10 @@ function Mood() {
     <form>
         <div className="feedback">
             <label className="angry">
-                <input type="radio" value="1" name="feedback" />
+                <input type="radio" value="1" name="feedback" onClick={e =>
+                    {setTimeout(function(){
+                        prompt(`Thanks for your feedback! Tell us more, so that we can improve.`)
+                    }, 1000)}}/>
                 <div>
                     <svg className="eye left">
                         <use xlinkHref="#eye" />
@@ -20,7 +23,10 @@ function Mood() {
                 </div>
             </label>
             <label className="sad">
-                <input type="radio" value="2" name="feedback" />
+                <input type="radio" value="2" name="feedback" onClick={e =>
+                    {setTimeout(function(){
+                        prompt(`Thanks for your feedback! Tell us more, so that we can improve.`)
+                    }, 1000)}}/>
                 <div>
                     <svg className="eye left">
                         <use xlinkHref="#eye" />
@@ -34,11 +40,17 @@ function Mood() {
                 </div>
             </label>
             <label className="ok">
-                <input type="radio" value="3" name="feedback" />
+                <input type="radio" value="3" name="feedback" onClick={e =>
+                    {setTimeout(function(){
+                        prompt(`Thanks for your feedback! Tell us more, so that we can improve.`)
+                    }, 1000)}}/>
                 <div></div>
             </label>
             <label className="good">
-                <input type="radio" value="4" name="feedback" defaultChecked />
+                <input type="radio" value="4" name="feedback" defaultChecked onClick={e =>
+                    {setTimeout(function(){
+                    alert(`Thanks for your feedback! Let's share TATA to your friends`)
+                    }, 1000)}}/>
                 <div>
                     <svg className="eye left">
                         <use xlinkHref="#eye" />
@@ -52,7 +64,10 @@ function Mood() {
                 </div>
             </label>
             <label className="happy">
-                <input type="radio" value="5" name="feedback" />
+                <input type="radio" value="5" name="feedback" onClick={e =>
+                    {setTimeout(function(){
+                    alert(`Thanks for your feedback! Let's share TATA to your friends`)
+                    }, 1000)}}/>
                 <div>
                     <svg className="eye left">
                         <use xlinkHref="#eye" />
