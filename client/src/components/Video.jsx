@@ -43,6 +43,7 @@ function Video({
         song={song}
       />
       <VideoSidebar
+        url={url}
         likesCount={likesCount}
         commentsCount={commentsCount}
         sharesCount={sharesCount}
