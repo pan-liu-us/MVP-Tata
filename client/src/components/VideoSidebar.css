@@ -11,5 +11,20 @@
 }
 
 .commentText {
-  padding: 20px;
+  padding: 10px 0 10px 50px;
+}
+
+.send_comment_button {
+  color: #fff;
+  background-color: #23d5ab;
+  height: 23px;
+  width: 40px;
+  border: 2px solid #23a6d5;
+  border-radius: 4px;
+  transform: translate(2px, -2.5px);
+  cursor: pointer;
+}
+
+.send_comment_button:hover {
+  background-color: #23a6d5;
 }

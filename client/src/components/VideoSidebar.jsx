@@ -36,16 +36,18 @@ function VideoSidebar({ url, likesCount, commentsCount, sharesCount, onShowComme
         <RiMessage2Fill fontSize="xx-large" onClick={() => setIsCommentsOpen(true)}/>
         <BottomSheet open={isCommentsOpen}>
         <AiFillCloseCircle
-          style={{position: "absolute", top: "10px", right: "10px", fontSize: "30px", color: "e73c7e"}}
+          style={{position: "absolute", top: "20px", right: "20px", fontSize: "30px", color: "e73c7e"}}
           onClick={() => setIsCommentsOpen(false)}/>
-          <input
-            style={{marginLeft: "20px", border: "2px solid #23a6d5"}}
-            type="text" value={newComment}
-            onChange={e => setNewComment(e.target.value)}></input>
-          <button
-            style={{color: "#fff", backgroundColor: "#23d5ab", border: "2px solid #23a6d5"}}
-            type="button"
-            onClick={e => {newComment.length ? commentProcess() : alert('Please enter your comment before sending :)')}}>Send</button>
+          <div style={{textAlign: "center"}}>
+            <p>{`${allCommentsCount} comments`}</p>
+            <input
+              style={{border: "2px solid #23a6d5", fontSize: "20px"}}
+              type="text" value={newComment}
+              onChange={e => setNewComment(e.target.value)}></input>
+            <button className="send_comment_button"
+              type="button"
+              onClick={e => {newComment.length ? commentProcess() : alert('Please enter your comment before sending :)')}}>Send</button>
+          </div>
           {allComments.map((comment, idx) =>
             <div className="commentText" key={idx}>{comment}</div>
           )}
