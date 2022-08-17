@@ -28,7 +28,7 @@ function VideoSidebar({ url, likesCount, commentsCount, sharesCount, onShowComme
       {isLiked ? (
           <MdFavorite fontSize="xx-large"  style={{color: "#E34A6F"}} onClick={(e) => setIsLiked(false)}/>
        ) : (
-          <MdFavorite fontSize="xx-large" style={{color: "#EDE1CF"}} onClick={(e) => setIsLiked(true)}/>
+          <MdFavorite fontSize="xx-large" style={{color: "#fff"}} onClick={(e) => setIsLiked(true)}/>
        )}
         <p>{isLiked ? allLikesCount + 1 : allLikesCount}</p>
       </div>
