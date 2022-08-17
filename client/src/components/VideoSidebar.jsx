@@ -17,7 +17,7 @@ function VideoSidebar({ url, likesCount, commentsCount, sharesCount, onShowComme
   const [allSharesCount, setAllSharesCount] = useState(sharesCount);
 
   const commentProcess = () => {
-    setAllComments([...allComments, newComment])
+    setAllComments([newComment, ...allComments])
     setNewComment('')
     setAllCommentsCount(allCommentsCount + 1)
   }
