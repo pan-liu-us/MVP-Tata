@@ -14,6 +14,10 @@
   padding: 10px 0 10px 50px;
 }
 
+.count_number {
+  text-align: center;
+}
+
 .send_comment_button {
   color: #fff;
   background-color: #23d5ab;

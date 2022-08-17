@@ -30,7 +30,7 @@ function VideoSidebar({ url, likesCount, commentsCount, sharesCount, onShowComme
        ) : (
           <MdFavorite fontSize="xx-large" style={{color: "#fff"}} onClick={(e) => setIsLiked(true)}/>
        )}
-        <p>{isLiked ? allLikesCount + 1 : allLikesCount}</p>
+        <p className="count_number">{isLiked ? allLikesCount + 1 : allLikesCount}</p>
       </div>
       <div className="video_sidebar_button">
         <RiMessage2Fill fontSize="xx-large" onClick={() => setIsCommentsOpen(true)}/>
@@ -52,14 +52,14 @@ function VideoSidebar({ url, likesCount, commentsCount, sharesCount, onShowComme
             <div className="commentText" key={idx}>{comment}</div>
           )}
         </BottomSheet>
-        <p>{allCommentsCount}</p>
+        <p className="count_number">{allCommentsCount}</p>
       </div>
       <div className="video_sidebar_button">
         <FaShare fontSize="xx-large" onClick={e => {
           prompt(`Share this video to your friends`, `${url}`)
           setAllSharesCount(allSharesCount + 1)
           }}/>
-        <p>{allSharesCount}</p>
+        <p className="count_number">{allSharesCount}</p>
       </div>
     </div>
   );
